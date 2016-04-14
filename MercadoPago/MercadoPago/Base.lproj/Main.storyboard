@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5Qy-zj-r7s">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OpenSans-CondBold.ttf">
+            <string>OpenSans-CondensedBold</string>
+        </mutableArray>
+        <mutableArray key="OpenSans-CondLight.ttf">
+            <string>OpenSans-CondensedLight</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--MercadoPago-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MercadoPago" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +24,90 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingrese el monto a pagar:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWo-jg-juP">
+                                <rect key="frame" x="20" y="84" width="173" height="24"/>
+                                <fontDescription key="fontDescription" name="OpenSans-CondensedBold" family="Open Sans Condensed" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese el monto" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="w3J-6k-wGE">
+                                <rect key="frame" x="201" y="80" width="379" height="30"/>
+                                <fontDescription key="fontDescription" name="OpenSans-CondensedLight" family="Open Sans" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="YWo-jg-juP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="2Wv-jc-WEQ"/>
+                            <constraint firstItem="w3J-6k-wGE" firstAttribute="leading" secondItem="YWo-jg-juP" secondAttribute="trailing" constant="8" id="2yH-gl-70b"/>
+                            <constraint firstItem="YWo-jg-juP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Jlz-ta-oi4"/>
+                            <constraint firstItem="w3J-6k-wGE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="Uo9-G1-AYX"/>
+                            <constraint firstAttribute="trailing" secondItem="w3J-6k-wGE" secondAttribute="trailing" constant="20" id="Wyq-J6-SXp"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="LyZ-Js-VWM" appends="YES" id="Jbf-dL-fsZ"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" title="MercadoPago" id="Wwr-wF-bbZ">
+                        <barButtonItem key="rightBarButtonItem" title="Siguiente" style="plain" id="aVo-iv-kRi">
+                            <connections>
+                                <action selector="buttonSiguiente:" destination="BYZ-38-t0r" id="BmM-vG-77R"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textfieldMonto" destination="w3J-6k-wGE" id="Ew3-Ao-tPx"/>
+                        <segue destination="WAX-sF-Amk" kind="show" identifier="siguienteSegue" id="d67-AO-eHW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="LyZ-Js-VWM">
+                    <connections>
+                        <action selector="tapGesture:" destination="BYZ-38-t0r" id="rvu-PW-ViT"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="2710" y="-477"/>
+        </scene>
+        <!--Metodo de pago-->
+        <scene sceneID="SV2-6p-Qlx">
+            <objects>
+                <viewController id="WAX-sF-Amk" customClass="MetodoDePago" customModule="MercadoPago" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wj9-0q-yWc"/>
+                        <viewControllerLayoutGuide type="bottom" id="zYl-3W-2XA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fyx-pO-lB8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Metodo de pago" id="bDZ-NN-NkL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z4B-Hr-j9Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3384" y="-477"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9iJ-sI-kTW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Qy-zj-r7s" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wPd-Jj-3Nr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uEg-33-7gT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CR7-vy-w6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1898" y="-477"/>
         </scene>
     </scenes>
 </document>
