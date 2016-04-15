@@ -178,6 +178,7 @@
                                 <connections>
                                     <outlet property="imageCreditCard" destination="kk4-XY-DST" id="OuQ-T5-wDw"/>
                                     <outlet property="labelName" destination="F55-Xv-hed" id="RbJ-IN-bWL"/>
+                                    <segue destination="YZz-Kw-Tcv" kind="show" id="Y0x-Y7-6Xf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -193,6 +194,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tOS-ZP-SZn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4116" y="-477"/>
+        </scene>
+        <!--Cuotas-->
+        <scene sceneID="npC-nV-5bv">
+            <objects>
+                <tableViewController id="YZz-Kw-Tcv" customClass="Cuotas" customModule="MercadoPago" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Fy4-xB-RjO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cuotasCell" id="VRG-O6-XSw" customClass="CuotasCell" customModule="MercadoPago" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VRG-O6-XSw" id="Ts4-Kk-GFA">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="YZz-Kw-Tcv" id="FCd-89-C8e"/>
+                            <outlet property="delegate" destination="YZz-Kw-Tcv" id="YA3-is-8XY"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="blp-W3-Od8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4799" y="-477"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9iJ-sI-kTW">
