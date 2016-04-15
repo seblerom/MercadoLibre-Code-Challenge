@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import AlamofireImage
 
 class Connection: NSObject {
     
@@ -23,7 +24,21 @@ class Connection: NSObject {
                 }
             case .Failure(let error):
                 print(error)
+                let value = response.result.value
+                let json = JSON(value!)
+                completion(json)
             }
         }
+    }
+    
+    class func downloadThumbnails(base_url:String,completion:(UIImage)->Void){
+        Alamofire.request(.GET,base_url).responseImage { response in
+            guard let img = response.result.value else{
+                completion(UIImage())
+                return
+            }
+            completion(img)
+        }
+        
     }
 }

@@ -16,7 +16,7 @@ class PaymentMethod: NSObject {
     var additional_info_needed = [String]()
     var payment_type_id:String?
     var accreditation_time:Int?
-    var settings = [String]()
+    var settings = [Any]()
     
     var max_allowed_amount:Int?
     var min_allowed_amount:Int?
@@ -59,7 +59,7 @@ class PaymentMethod: NSObject {
         }
     }
     
-    init(id:String,deferred_capture:String,additional_info_needed:([String]),payment_type_id:String,accreditation_time:Int,settings:([String]),max_allowed_amount:Int,min_allowed_amount:Int,secure_thumbnail:String,thumbnail:String,name:String,status:String){
+    init(id:String,deferred_capture:String,additional_info_needed:([String]),payment_type_id:String,accreditation_time:Int,settings:([Any]),max_allowed_amount:Int,min_allowed_amount:Int,secure_thumbnail:String,thumbnail:String,name:String,status:String){
     
         self.id = id
         self.deferred_capture = deferred_capture

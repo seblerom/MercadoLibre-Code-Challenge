@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '5CB6AFF19B0B64311E6C5A33'
+               BlueprintIdentifier = '5E8333393C55C6D2E47434C3'
                BlueprintName = 'Pods-MercadoPago'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_MercadoPago.framework'>

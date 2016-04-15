@@ -85,11 +85,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-MercadoPago/Alamofire.framework"
+  install_framework "Pods-MercadoPago/AlamofireImage.framework"
   install_framework "Pods-MercadoPago/MBProgressHUD.framework"
   install_framework "Pods-MercadoPago/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-MercadoPago/Alamofire.framework"
+  install_framework "Pods-MercadoPago/AlamofireImage.framework"
   install_framework "Pods-MercadoPago/MBProgressHUD.framework"
   install_framework "Pods-MercadoPago/SwiftyJSON.framework"
 fi

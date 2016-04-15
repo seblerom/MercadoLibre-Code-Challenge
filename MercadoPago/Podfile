@@ -6,4 +6,5 @@ target 'MercadoPago' do
 pod 'Alamofire', '~> 3.3'
 pod 'MBProgressHUD', '~> 0.9.2'
 pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+pod 'AlamofireImage', '~> 2.0'
 end

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A972F9538DA337E4D7855B26 /* Pods_MercadoPago.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AF91B459E57159F6CCF969 /* Pods_MercadoPago.framework */; };
+		C170568F1CC163990050C7E6 /* Bancos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C170568E1CC163990050C7E6 /* Bancos.swift */; };
+		C17056911CC164F10050C7E6 /* Banco.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056901CC164F10050C7E6 /* Banco.swift */; };
+		C1CE552E1CC1530100C2D1A2 /* MetodosDePago.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CE552D1CC1530100C2D1A2 /* MetodosDePago.swift */; };
+		C1CE55301CC153BF00C2D1A2 /* MetodosDePagoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CE552F1CC153BF00C2D1A2 /* MetodosDePagoCell.swift */; };
 		C1DC214A1CBFDE9800F16FC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DC21491CBFDE9800F16FC0 /* AppDelegate.swift */; };
 		C1DC214C1CBFDE9800F16FC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DC214B1CBFDE9800F16FC0 /* ViewController.swift */; };
 		C1DC214F1CBFDE9800F16FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DC214D1CBFDE9800F16FC0 /* Main.storyboard */; };
@@ -17,7 +21,6 @@
 		C1DC21671CBFEF6900F16FC0 /* OpenSans-CondLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1DC21651CBFEF6900F16FC0 /* OpenSans-CondLight.ttf */; };
 		C1DC21681CBFEF6900F16FC0 /* OpenSans-CondBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1DC21661CBFEF6900F16FC0 /* OpenSans-CondBold.ttf */; };
 		C1DC216B1CC00E3500F16FC0 /* AlertViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DC216A1CC00E3500F16FC0 /* AlertViews.swift */; };
-		C1DC216D1CC0110B00F16FC0 /* MetodoDePago.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DC216C1CC0110B00F16FC0 /* MetodoDePago.swift */; };
 		C1DC216F1CC011A900F16FC0 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DC216E1CC011A900F16FC0 /* Connection.swift */; };
 		C1DC21721CC0149D00F16FC0 /* apiEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DC21711CC0149D00F16FC0 /* apiEndpoints.swift */; };
 		C1DC21751CC0262200F16FC0 /* PaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DC21741CC0262200F16FC0 /* PaymentMethod.swift */; };
@@ -26,6 +29,10 @@
 /* Begin PBXFileReference section */
 		24A3EBBE6BE61FBDCC421161 /* Pods-MercadoPago.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoPago.release.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoPago/Pods-MercadoPago.release.xcconfig"; sourceTree = "<group>"; };
 		674EA8F521931007454E1E99 /* Pods-MercadoPago.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoPago.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoPago/Pods-MercadoPago.debug.xcconfig"; sourceTree = "<group>"; };
+		C170568E1CC163990050C7E6 /* Bancos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bancos.swift; sourceTree = "<group>"; };
+		C17056901CC164F10050C7E6 /* Banco.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banco.swift; sourceTree = "<group>"; };
+		C1CE552D1CC1530100C2D1A2 /* MetodosDePago.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetodosDePago.swift; sourceTree = "<group>"; };
+		C1CE552F1CC153BF00C2D1A2 /* MetodosDePagoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetodosDePagoCell.swift; sourceTree = "<group>"; };
 		C1DC21461CBFDE9800F16FC0 /* MercadoPago.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadoPago.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1DC21491CBFDE9800F16FC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1DC214B1CBFDE9800F16FC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,7 +45,6 @@
 		C1DC21651CBFEF6900F16FC0 /* OpenSans-CondLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-CondLight.ttf"; path = "../../../../Downloads/OpenSans-CondLight.ttf"; sourceTree = "<group>"; };
 		C1DC21661CBFEF6900F16FC0 /* OpenSans-CondBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-CondBold.ttf"; path = "../../../../Downloads/OpenSans-CondBold.ttf"; sourceTree = "<group>"; };
 		C1DC216A1CC00E3500F16FC0 /* AlertViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViews.swift; sourceTree = "<group>"; };
-		C1DC216C1CC0110B00F16FC0 /* MetodoDePago.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetodoDePago.swift; sourceTree = "<group>"; };
 		C1DC216E1CC011A900F16FC0 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		C1DC21711CC0149D00F16FC0 /* apiEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = apiEndpoints.swift; sourceTree = "<group>"; };
 		C1DC21741CC0262200F16FC0 /* PaymentMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentMethod.swift; sourceTree = "<group>"; };
@@ -72,6 +78,14 @@
 				F1AF91B459E57159F6CCF969 /* Pods_MercadoPago.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1CE55311CC153C300C2D1A2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C1CE552F1CC153BF00C2D1A2 /* MetodosDePagoCell.swift */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		C1DC213D1CBFDE9800F16FC0 = {
@@ -119,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				C1DC21741CC0262200F16FC0 /* PaymentMethod.swift */,
+				C17056901CC164F10050C7E6 /* Banco.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -126,8 +141,10 @@
 		C1DC215D1CBFE19600F16FC0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C1CE55311CC153C300C2D1A2 /* Cell */,
 				C1DC214B1CBFDE9800F16FC0 /* ViewController.swift */,
-				C1DC216C1CC0110B00F16FC0 /* MetodoDePago.swift */,
+				C1CE552D1CC1530100C2D1A2 /* MetodosDePago.swift */,
+				C170568E1CC163990050C7E6 /* Bancos.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -310,10 +327,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1CE552E1CC1530100C2D1A2 /* MetodosDePago.swift in Sources */,
+				C17056911CC164F10050C7E6 /* Banco.swift in Sources */,
+				C1CE55301CC153BF00C2D1A2 /* MetodosDePagoCell.swift in Sources */,
 				C1DC21601CBFE2F600F16FC0 /* LoadingAnimations.swift in Sources */,
 				C1DC216F1CC011A900F16FC0 /* Connection.swift in Sources */,
 				C1DC216B1CC00E3500F16FC0 /* AlertViews.swift in Sources */,
-				C1DC216D1CC0110B00F16FC0 /* MetodoDePago.swift in Sources */,
+				C170568F1CC163990050C7E6 /* Bancos.swift in Sources */,
 				C1DC21721CC0149D00F16FC0 /* apiEndpoints.swift in Sources */,
 				C1DC21751CC0262200F16FC0 /* PaymentMethod.swift in Sources */,
 				C1DC214C1CBFDE9800F16FC0 /* ViewController.swift in Sources */,

@@ -17,7 +17,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
         let text = Double(textfieldMonto.text!)
         if text > 0 {
             self.tapGesture(self)
-            self.performSegueWithIdentifier("siguienteSegue", sender: self)
+            self.performSegueWithIdentifier("metodoDePagoSegue", sender: self)
         }else{
             AlertViews.SingleAlert("Atencion", message: "El importe ingresado debe ser mayor a cero", buttonTitle: "Entendido!")
         }
