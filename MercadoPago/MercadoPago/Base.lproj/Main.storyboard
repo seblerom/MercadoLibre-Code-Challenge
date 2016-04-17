@@ -73,17 +73,17 @@
             </objects>
             <point key="canvasLocation" x="2710" y="-477"/>
         </scene>
-        <!--Metodos De Pago-->
+        <!--Metodo de pago-->
         <scene sceneID="4st-A2-obm">
             <objects>
                 <tableViewController id="ajQ-Re-JBu" customClass="MetodosDePago" customModule="MercadoPago" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="JBW-to-Tk6">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="JBW-to-Tk6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="metodosDePagoCell" rowHeight="44" id="rGD-av-jPw" customClass="MetodosDePagoCell" customModule="MercadoPago" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="113.5" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rGD-av-jPw" id="51g-yX-FBp">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -99,7 +99,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4a-sM-SH1">
                                             <rect key="frame" x="40" y="11" width="552" height="22"/>
                                             <fontDescription key="fontDescription" name="OpenSans-CondensedLight" family="Open Sans" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -113,7 +113,7 @@
                                         <constraint firstItem="RVR-sL-zJ1" firstAttribute="leading" secondItem="51g-yX-FBp" secondAttribute="leading" constant="8" id="sMY-1k-HTp"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="imageCreditCard" destination="RVR-sL-zJ1" id="937-Q8-bDW"/>
                                     <outlet property="labelName" destination="H4a-sM-SH1" id="9WP-29-kGp"/>
@@ -126,6 +126,7 @@
                             <outlet property="delegate" destination="ajQ-Re-JBu" id="gc1-cx-rJP"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Metodo de pago" id="PjU-eB-Jk1"/>
                     <connections>
                         <outlet property="tableview" destination="JBW-to-Tk6" id="31z-Aj-sX7"/>
                     </connections>
@@ -134,17 +135,17 @@
             </objects>
             <point key="canvasLocation" x="3429" y="-477"/>
         </scene>
-        <!--Bancos-->
+        <!--Banco emisor-->
         <scene sceneID="TTY-Uu-hLC">
             <objects>
                 <tableViewController id="mah-Xk-nQS" customClass="Bancos" customModule="MercadoPago" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="u2m-uN-1s2">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="u2m-uN-1s2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="metodosDePagoCell" rowHeight="44" id="jnm-th-gAX" customClass="MetodosDePagoCell" customModule="MercadoPago" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="113.5" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jnm-th-gAX" id="AtQ-yr-ddA">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -160,7 +161,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F55-Xv-hed">
                                             <rect key="frame" x="46" y="11" width="546" height="22"/>
                                             <fontDescription key="fontDescription" name="OpenSans-CondensedLight" family="Open Sans" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -174,7 +175,7 @@
                                         <constraint firstAttribute="trailing" secondItem="F55-Xv-hed" secondAttribute="trailing" constant="8" id="zwz-l8-unu"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="imageCreditCard" destination="kk4-XY-DST" id="OuQ-T5-wDw"/>
                                     <outlet property="labelName" destination="F55-Xv-hed" id="RbJ-IN-bWL"/>
@@ -187,6 +188,7 @@
                             <outlet property="delegate" destination="mah-Xk-nQS" id="0p2-Fn-9Pg"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Banco emisor" id="a0Q-Tt-EdE"/>
                     <connections>
                         <outlet property="tableview" destination="u2m-uN-1s2" id="Q62-TN-SRy"/>
                     </connections>
@@ -195,17 +197,17 @@
             </objects>
             <point key="canvasLocation" x="4116" y="-477"/>
         </scene>
-        <!--Cuotas-->
+        <!--Cantidad de cuotas-->
         <scene sceneID="npC-nV-5bv">
             <objects>
                 <tableViewController id="YZz-Kw-Tcv" customClass="Cuotas" customModule="MercadoPago" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Fy4-xB-RjO">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Fy4-xB-RjO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cuotasCell" id="VRG-O6-XSw" customClass="CuotasCell" customModule="MercadoPago" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="114" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VRG-O6-XSw" id="Ts4-Kk-GFA">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -218,6 +220,7 @@
                             <outlet property="delegate" destination="YZz-Kw-Tcv" id="YA3-is-8XY"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Cantidad de cuotas" id="ZPn-B0-TAT"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="blp-W3-Od8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

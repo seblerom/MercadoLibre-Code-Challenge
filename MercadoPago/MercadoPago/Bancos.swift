@@ -12,16 +12,18 @@ import SwiftyJSON
 class Bancos: UITableViewController {
 
     @IBOutlet var tableview: UITableView!
-    var item: PaymentMethod? = nil
+    var itemPaymentMethod: PaymentMethod? = nil
+    var amount = String()
     var modelArray:[Banco] = []
     let basicCellIdentifier = "metodosDePagoCell"
 
     override func viewDidLoad() {
-        DownloadPaymentMethods()
+        
     }
     
     func DownloadPaymentMethods(){
-        let payment_method_id = item!.id as String!
+        
+        let payment_method_id = itemPaymentMethod!.id as String!
         print(payment_method_id)
         let parameters = ["public_key":public_key,"payment_method_id":String(payment_method_id)]
         LoadingAnimations.showProgressHUD(self.view)
@@ -31,6 +33,9 @@ class Bancos: UITableViewController {
         }
     }
     
+    override func viewDidAppear(animated: Bool) {
+        DownloadPaymentMethods()
+    }
     func createArrayWithBanks(data:(JSON)){
         
         for (index,subJson):(String, JSON) in data {
@@ -63,6 +68,19 @@ class Bancos: UITableViewController {
     }
     
     // MARK: - Table view data source
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 32.0
+    }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let title = "Seleccione el banco"
+        return title
+    }
+    
+    override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 1.0
+    }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.modelArray.count
@@ -97,6 +115,16 @@ class Bancos: UITableViewController {
             self.tableView.reloadData()
             self.tableView.scrollRectToVisible(CGRectMake(0, 0, 1, 1), animated: false)
         })
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let indexPath = tableView.indexPathForSelectedRow
+        let itemBanco = self.modelArray[indexPath!.row]
+        let cuotas = segue.destinationViewController as! Cuotas
+        cuotas.itemBancos = itemBanco
+        cuotas.itemMetodoDePago = itemPaymentMethod
+        cuotas.amount = amount
+        
     }
 
 }

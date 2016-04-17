@@ -6,9 +6,10 @@
 //  Copyright © 2016 seblerom. All rights reserved.
 //
 
-import UIKit
 
-class Banco: NSObject {
+import Foundation
+
+class Banco{
 
     var id:String?
     var name:String?

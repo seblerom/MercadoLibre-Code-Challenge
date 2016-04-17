@@ -12,6 +12,7 @@
 		C17056911CC164F10050C7E6 /* Banco.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056901CC164F10050C7E6 /* Banco.swift */; };
 		C17056931CC16FF80050C7E6 /* Cuotas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056921CC16FF80050C7E6 /* Cuotas.swift */; };
 		C17056951CC170510050C7E6 /* CuotasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056941CC170510050C7E6 /* CuotasCell.swift */; };
+		C1851D5D1CC4216E00FA686A /* CuotaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1851D5C1CC4216E00FA686A /* CuotaModel.swift */; };
 		C1CE552E1CC1530100C2D1A2 /* MetodosDePago.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CE552D1CC1530100C2D1A2 /* MetodosDePago.swift */; };
 		C1CE55301CC153BF00C2D1A2 /* MetodosDePagoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CE552F1CC153BF00C2D1A2 /* MetodosDePagoCell.swift */; };
 		C1DC214A1CBFDE9800F16FC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DC21491CBFDE9800F16FC0 /* AppDelegate.swift */; };
@@ -35,6 +36,7 @@
 		C17056901CC164F10050C7E6 /* Banco.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banco.swift; sourceTree = "<group>"; };
 		C17056921CC16FF80050C7E6 /* Cuotas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cuotas.swift; sourceTree = "<group>"; };
 		C17056941CC170510050C7E6 /* CuotasCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuotasCell.swift; sourceTree = "<group>"; };
+		C1851D5C1CC4216E00FA686A /* CuotaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuotaModel.swift; sourceTree = "<group>"; };
 		C1CE552D1CC1530100C2D1A2 /* MetodosDePago.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetodosDePago.swift; sourceTree = "<group>"; };
 		C1CE552F1CC153BF00C2D1A2 /* MetodosDePagoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetodosDePagoCell.swift; sourceTree = "<group>"; };
 		C1DC21461CBFDE9800F16FC0 /* MercadoPago.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadoPago.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +141,7 @@
 			children = (
 				C1DC21741CC0262200F16FC0 /* PaymentMethod.swift */,
 				C17056901CC164F10050C7E6 /* Banco.swift */,
+				C1851D5C1CC4216E00FA686A /* CuotaModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				C1CE55301CC153BF00C2D1A2 /* MetodosDePagoCell.swift in Sources */,
 				C1DC21601CBFE2F600F16FC0 /* LoadingAnimations.swift in Sources */,
 				C1DC216F1CC011A900F16FC0 /* Connection.swift in Sources */,
+				C1851D5D1CC4216E00FA686A /* CuotaModel.swift in Sources */,
 				C1DC216B1CC00E3500F16FC0 /* AlertViews.swift in Sources */,
 				C170568F1CC163990050C7E6 /* Bancos.swift in Sources */,
 				C1DC21721CC0149D00F16FC0 /* apiEndpoints.swift in Sources */,

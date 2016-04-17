@@ -12,11 +12,31 @@ import SwiftyJSON
 class MetodosDePago: UITableViewController{
 
     @IBOutlet var tableview: UITableView!
+    var amount:String? = nil
     let basicCellIdentifier = "metodosDePagoCell"
     var modelArray:[PaymentMethod] = []
     override func viewDidLoad() {
         DownloadPaymentMethods()
     }
+    
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//        
+//        // Dynamic sizing for the header view
+//        if let headerView = tableView.tableHeaderView {
+//            let height = headerView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize).height
+//            var headerFrame = headerView.frame
+//            
+//            // If we don't have this check, viewDidLayoutSubviews() will get
+//            // repeatedly, causing the app to hang.
+//            if height != headerFrame.size.height {
+//                headerFrame.size.height = height
+//                headerView.frame = headerFrame
+//                tableView.tableHeaderView = headerView
+//            }
+//        }
+//    }
+
     
     func DownloadPaymentMethods(){
         let parameters = ["public_key":public_key]
@@ -29,7 +49,7 @@ class MetodosDePago: UITableViewController{
     
     func CreateArrayWithPaymentMethods(data:(JSON)){
         
-        for (index,subJson):(String, JSON) in data {
+        for (_,subJson):(String, JSON) in data {
 
             var id = ""
             if subJson["id"].exists(){
@@ -165,6 +185,19 @@ class MetodosDePago: UITableViewController{
     }
     // MARK: - Table view data source
     
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 32.0
+    }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let title = "Seleccione el metodo de pago"
+        return title
+    }
+    
+    override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 1.0
+    }
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.modelArray.count
     }
@@ -207,7 +240,7 @@ class MetodosDePago: UITableViewController{
         let indexPath = tableView.indexPathForSelectedRow
         let item = self.modelArray[indexPath!.row]
         let bancos = segue.destinationViewController as! Bancos
-        bancos.item = item
-
+        bancos.itemPaymentMethod = item
+        bancos.amount = amount!
     }
 }

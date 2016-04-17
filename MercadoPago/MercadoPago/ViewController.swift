@@ -35,6 +35,11 @@ class ViewController: UIViewController,UITextFieldDelegate {
     @IBAction func tapGesture(sender: AnyObject) {
         textfieldMonto.resignFirstResponder()
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let metodosDePago = segue.destinationViewController as! MetodosDePago
+        metodosDePago.amount = self.textfieldMonto.text
+    }
 
 //    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
 //        

@@ -6,9 +6,9 @@
 //  Copyright © 2016 seblerom. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class PaymentMethod: NSObject {
+class PaymentMethod{
     
     
     var id:String?
