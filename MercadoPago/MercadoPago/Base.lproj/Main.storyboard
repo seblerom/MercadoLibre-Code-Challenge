@@ -12,6 +12,7 @@
             <string>OpenSans-CondensedLight</string>
             <string>OpenSans-CondensedLight</string>
             <string>OpenSans-CondensedLight</string>
+            <string>OpenSans-CondensedLight</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -206,13 +207,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cuotasCell" id="VRG-O6-XSw" customClass="CuotasCell" customModule="MercadoPago" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="114" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="metodosDePagoCell" rowHeight="44" id="kK7-oQ-Vxt" customClass="MetodosDePagoCell" customModule="MercadoPago" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="113.5" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VRG-O6-XSw" id="Ts4-Kk-GFA">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kK7-oQ-Vxt" id="5Wx-dr-D7Q">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O5H-P5-n8L">
+                                            <rect key="frame" x="8" y="7" width="30" height="30"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="egD-46-g31"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Znx-jK-Vht">
+                                            <rect key="frame" x="46" y="11" width="546" height="22"/>
+                                            <fontDescription key="fontDescription" name="OpenSans-CondensedLight" family="Open Sans" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Znx-jK-Vht" firstAttribute="top" secondItem="5Wx-dr-D7Q" secondAttribute="top" constant="11" id="BXF-2e-GMP"/>
+                                        <constraint firstAttribute="trailing" secondItem="Znx-jK-Vht" secondAttribute="trailing" constant="8" id="FTn-4G-oPM"/>
+                                        <constraint firstItem="O5H-P5-n8L" firstAttribute="leading" secondItem="5Wx-dr-D7Q" secondAttribute="leading" constant="8" id="NGW-vg-YEl"/>
+                                        <constraint firstItem="O5H-P5-n8L" firstAttribute="top" secondItem="5Wx-dr-D7Q" secondAttribute="top" constant="7" id="WOI-Qt-LjV"/>
+                                        <constraint firstAttribute="bottom" secondItem="O5H-P5-n8L" secondAttribute="bottom" constant="7" id="bb2-0t-5qq"/>
+                                        <constraint firstItem="Znx-jK-Vht" firstAttribute="leading" secondItem="O5H-P5-n8L" secondAttribute="trailing" constant="8" id="iWQ-Ev-N1J"/>
+                                        <constraint firstAttribute="bottom" secondItem="Znx-jK-Vht" secondAttribute="bottom" constant="11" id="lz1-Je-GSx"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="imageCreditCard" destination="O5H-P5-n8L" id="cyK-3w-r1F"/>
+                                    <outlet property="labelName" destination="Znx-jK-Vht" id="WX2-ju-bHJ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -221,6 +251,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Cantidad de cuotas" id="ZPn-B0-TAT"/>
+                    <connections>
+                        <outlet property="tableview" destination="Fy4-xB-RjO" id="tR0-Wj-Jp5"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="blp-W3-Od8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

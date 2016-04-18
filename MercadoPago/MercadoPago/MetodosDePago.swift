@@ -16,6 +16,7 @@ class MetodosDePago: UITableViewController{
     let basicCellIdentifier = "metodosDePagoCell"
     var modelArray:[PaymentMethod] = []
     override func viewDidLoad() {
+        self.navigationController?.navigationBar.topItem?.title = ""
         DownloadPaymentMethods()
     }
     

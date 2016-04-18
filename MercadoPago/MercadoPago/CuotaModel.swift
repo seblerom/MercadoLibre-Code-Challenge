@@ -12,7 +12,7 @@ class CuotaModel {
     
     var payment_method_id:String?
     var payment_type_id:String?
-    var issuer = CuotaModel.IssuerStruct.self
+    var issuer:CuotaModel.IssuerStruct
     var payer_costs = [Any]()
     
     struct IssuerStruct {
@@ -34,16 +34,16 @@ class CuotaModel {
     struct payer_costs {
         
         var installments:Int?
-        var installment_rate:Int?
-        var discount_rate:Int?
+        var installment_rate:Double?
+        var discount_rate:Double?
         var labels:String?
-        var min_allowed_amount:Int?
-        var max_allowed_amount:Int?
+        var min_allowed_amount:Double?
+        var max_allowed_amount:Double?
         var recommended_message:String?
-        var installment_amount:Int?
-        var total_amount:Int?
+        var installment_amount:Double?
+        var total_amount:Double?
         
-        init(installments:Int,installment_rate:Int,discount_rate:Int,labels:String,min_allowed_amount:Int,max_allowed_amount:Int,recommended_message:String,installment_amount:Int,total_amount:Int){
+        init(installments:Int,installment_rate:Double,discount_rate:Double,labels:String,min_allowed_amount:Double,max_allowed_amount:Double,recommended_message:String,installment_amount:Double,total_amount:Double){
             
             self.installments = installments
             self.installment_rate = installment_rate
@@ -56,5 +56,14 @@ class CuotaModel {
             self.total_amount = total_amount
             
         }
+    }
+    
+    init(payment_method_id:String,payment_type_id:String,issuer:CuotaModel.IssuerStruct,payer_costs:[Any]){
+        
+        self.payment_method_id = payment_method_id
+        self.payment_type_id = payment_type_id
+        self.issuer = issuer
+        self.payer_costs = payer_costs
+    
     }
 }

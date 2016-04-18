@@ -18,13 +18,13 @@ class Bancos: UITableViewController {
     let basicCellIdentifier = "metodosDePagoCell"
 
     override func viewDidLoad() {
-        
+        self.navigationController?.navigationBar.topItem?.title = ""
+        DownloadPaymentMethods()
     }
     
     func DownloadPaymentMethods(){
         
         let payment_method_id = itemPaymentMethod!.id as String!
-        print(payment_method_id)
         let parameters = ["public_key":public_key,"payment_method_id":String(payment_method_id)]
         LoadingAnimations.showProgressHUD(self.view)
         Connection.networkingCallsMaster(creditCardIssuers, parameters: parameters) { response in
@@ -33,13 +33,10 @@ class Bancos: UITableViewController {
         }
     }
     
-    override func viewDidAppear(animated: Bool) {
-        DownloadPaymentMethods()
-    }
+
     func createArrayWithBanks(data:(JSON)){
         
-        for (index,subJson):(String, JSON) in data {
-            print(index)
+        for (_,subJson):(String, JSON) in data {
             
             var id = ""
             if subJson["id"].exists(){
