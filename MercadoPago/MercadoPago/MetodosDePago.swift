@@ -16,28 +16,9 @@ class MetodosDePago: UITableViewController{
     let basicCellIdentifier = "metodosDePagoCell"
     var modelArray:[PaymentMethod] = []
     override func viewDidLoad() {
-        self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationItem.titleView = NavItemTitle.SetTitleView()
         DownloadPaymentMethods()
     }
-    
-//    override func viewDidLayoutSubviews() {
-//        super.viewDidLayoutSubviews()
-//        
-//        // Dynamic sizing for the header view
-//        if let headerView = tableView.tableHeaderView {
-//            let height = headerView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize).height
-//            var headerFrame = headerView.frame
-//            
-//            // If we don't have this check, viewDidLayoutSubviews() will get
-//            // repeatedly, causing the app to hang.
-//            if height != headerFrame.size.height {
-//                headerFrame.size.height = height
-//                headerView.frame = headerFrame
-//                tableView.tableHeaderView = headerView
-//            }
-//        }
-//    }
-
     
     func DownloadPaymentMethods(){
         let parameters = ["public_key":public_key]

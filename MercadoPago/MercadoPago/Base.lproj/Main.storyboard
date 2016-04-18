@@ -16,7 +16,7 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--MercadoPago-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MercadoPago" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,7 +40,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="YWo-jg-juP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="2Wv-jc-WEQ"/>
@@ -53,7 +53,8 @@
                             <outletCollection property="gestureRecognizers" destination="LyZ-Js-VWM" appends="YES" id="Jbf-dL-fsZ"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="MercadoPago" id="Wwr-wF-bbZ">
+                    <navigationItem key="navigationItem" id="Wwr-wF-bbZ">
+                        <nil key="title"/>
                         <barButtonItem key="rightBarButtonItem" title="Siguiente" style="plain" id="aVo-iv-kRi">
                             <connections>
                                 <action selector="buttonSiguiente:" destination="BYZ-38-t0r" id="BmM-vG-77R"/>
@@ -74,7 +75,7 @@
             </objects>
             <point key="canvasLocation" x="2710" y="-477"/>
         </scene>
-        <!--Metodo de pago-->
+        <!--Metodos De Pago-->
         <scene sceneID="4st-A2-obm">
             <objects>
                 <tableViewController id="ajQ-Re-JBu" customClass="MetodosDePago" customModule="MercadoPago" customModuleProvider="target" sceneMemberID="viewController">
@@ -127,7 +128,9 @@
                             <outlet property="delegate" destination="ajQ-Re-JBu" id="gc1-cx-rJP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Metodo de pago" id="PjU-eB-Jk1"/>
+                    <navigationItem key="navigationItem" id="PjU-eB-Jk1">
+                        <nil key="title"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableview" destination="JBW-to-Tk6" id="31z-Aj-sX7"/>
                     </connections>
@@ -136,7 +139,7 @@
             </objects>
             <point key="canvasLocation" x="3429" y="-477"/>
         </scene>
-        <!--Banco emisor-->
+        <!--Bancos-->
         <scene sceneID="TTY-Uu-hLC">
             <objects>
                 <tableViewController id="mah-Xk-nQS" customClass="Bancos" customModule="MercadoPago" customModuleProvider="target" sceneMemberID="viewController">
@@ -189,7 +192,7 @@
                             <outlet property="delegate" destination="mah-Xk-nQS" id="0p2-Fn-9Pg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Banco emisor" id="a0Q-Tt-EdE"/>
+                    <navigationItem key="navigationItem" id="a0Q-Tt-EdE"/>
                     <connections>
                         <outlet property="tableview" destination="u2m-uN-1s2" id="Q62-TN-SRy"/>
                     </connections>
@@ -198,7 +201,7 @@
             </objects>
             <point key="canvasLocation" x="4116" y="-477"/>
         </scene>
-        <!--Cantidad de cuotas-->
+        <!--Cuotas-->
         <scene sceneID="npC-nV-5bv">
             <objects>
                 <tableViewController id="YZz-Kw-Tcv" customClass="Cuotas" customModule="MercadoPago" customModuleProvider="target" sceneMemberID="viewController">
@@ -250,7 +253,7 @@
                             <outlet property="delegate" destination="YZz-Kw-Tcv" id="YA3-is-8XY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Cantidad de cuotas" id="ZPn-B0-TAT"/>
+                    <navigationItem key="navigationItem" id="ZPn-B0-TAT"/>
                     <connections>
                         <outlet property="tableview" destination="Fy4-xB-RjO" id="tR0-Wj-Jp5"/>
                     </connections>
@@ -267,7 +270,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wPd-Jj-3Nr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -275,8 +279,22 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CR7-vy-w6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="T1N-bM-438">
+                    <rect key="frame" x="0.0" y="0.0" width="32" height="33"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LaunchImageLogo" translatesAutoresizingMaskIntoConstraints="NO" id="mXA-vq-RZ5">
+                            <rect key="frame" x="0.0" y="0.0" width="33" height="33"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="1898" y="-477"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LaunchImageLogo" width="300" height="300"/>
+    </resources>
 </document>

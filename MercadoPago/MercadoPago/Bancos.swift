@@ -10,15 +10,15 @@ import UIKit
 import SwiftyJSON
 
 class Bancos: UITableViewController {
-
+    
     @IBOutlet var tableview: UITableView!
     var itemPaymentMethod: PaymentMethod? = nil
     var amount = String()
     var modelArray:[Banco] = []
     let basicCellIdentifier = "metodosDePagoCell"
-
+    
     override func viewDidLoad() {
-        self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationItem.titleView = NavItemTitle.SetTitleView()
         DownloadPaymentMethods()
     }
     
@@ -33,35 +33,38 @@ class Bancos: UITableViewController {
         }
     }
     
-
     func createArrayWithBanks(data:(JSON)){
         
-        for (_,subJson):(String, JSON) in data {
-            
-            var id = ""
-            if subJson["id"].exists(){
-                id = subJson["id"].stringValue
+        if data.isEmpty {
+            AlertViews.PopAlert("Atencion!", message: "No hay bancos relacionados a este medio de pago, intente con otro medio de pago", buttonTitle: "Ok")
+        }else{
+            for (_,subJson):(String, JSON) in data {
+                
+                var id = ""
+                if subJson["id"].exists(){
+                    id = subJson["id"].stringValue
+                }
+                
+                var name = ""
+                if subJson["name"].exists(){
+                    name = subJson["name"].stringValue
+                }
+                
+                var secure_thumbnail = ""
+                if subJson["secure_thumbnail"].exists(){
+                    secure_thumbnail = subJson["secure_thumbnail"].stringValue
+                }
+                
+                var thumbnail = ""
+                if subJson["thumbnail"].exists(){
+                    thumbnail = subJson["thumbnail"].stringValue
+                }
+                
+                let  model = Banco(id: id, name: name, secure_thumbnail: secure_thumbnail, thumbnail: thumbnail)
+                self.modelArray.append(model)
             }
-            
-            var name = ""
-            if subJson["name"].exists(){
-                name = subJson["name"].stringValue
-            }
-            
-            var secure_thumbnail = ""
-            if subJson["secure_thumbnail"].exists(){
-                secure_thumbnail = subJson["secure_thumbnail"].stringValue
-            }
-            
-            var thumbnail = ""
-            if subJson["thumbnail"].exists(){
-                thumbnail = subJson["thumbnail"].stringValue
-            }
-            
-            let  model = Banco(id: id, name: name, secure_thumbnail: secure_thumbnail, thumbnail: thumbnail)
-            self.modelArray.append(model)
+            reloadTableViewContent()
         }
-        reloadTableViewContent()
     }
     
     // MARK: - Table view data source
@@ -123,5 +126,5 @@ class Bancos: UITableViewController {
         cuotas.amount = amount
         
     }
-
+    
 }

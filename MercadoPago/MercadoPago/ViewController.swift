@@ -25,6 +25,9 @@ class ViewController: UIViewController,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         textfieldMonto.delegate = self
+        self.navigationItem.titleView = NavItemTitle.SetTitleView()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

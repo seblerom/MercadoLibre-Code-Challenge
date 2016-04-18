@@ -20,11 +20,7 @@ class Cuotas: UITableViewController {
     let basicCellIdentifier = "metodosDePagoCell"
     
     override func viewDidLoad() {
-        
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationItem.titleView = NavItemTitle.SetTitleView()
         DownloadCuotas()
     }
     
@@ -137,7 +133,6 @@ class Cuotas: UITableViewController {
             let modelCuotas = CuotaModel(payment_method_id: payment_method_id, payment_type_id: payment_type_id, issuer: issuerStruct, payer_costs: payerCosts)
             
             self.cuotasModelArray.append(modelCuotas)
-            print(cuotasModelArray)
             self.reloadTableViewContent()
         }
     }
@@ -188,6 +183,10 @@ class Cuotas: UITableViewController {
             self.tableView.reloadData()
             self.tableView.scrollRectToVisible(CGRectMake(0, 0, 1, 1), animated: false)
         })
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.navigationController?.popToRootViewControllerAnimated(true)
     }
 
 }

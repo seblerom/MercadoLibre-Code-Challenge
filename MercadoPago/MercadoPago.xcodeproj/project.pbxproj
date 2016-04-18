@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A972F9538DA337E4D7855B26 /* Pods_MercadoPago.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AF91B459E57159F6CCF969 /* Pods_MercadoPago.framework */; };
+		C1075A551CC53F9D009D8253 /* NavItemTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1075A541CC53F9D009D8253 /* NavItemTitle.swift */; };
 		C170568F1CC163990050C7E6 /* Bancos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C170568E1CC163990050C7E6 /* Bancos.swift */; };
 		C17056911CC164F10050C7E6 /* Banco.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056901CC164F10050C7E6 /* Banco.swift */; };
 		C17056931CC16FF80050C7E6 /* Cuotas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056921CC16FF80050C7E6 /* Cuotas.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		24A3EBBE6BE61FBDCC421161 /* Pods-MercadoPago.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoPago.release.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoPago/Pods-MercadoPago.release.xcconfig"; sourceTree = "<group>"; };
 		674EA8F521931007454E1E99 /* Pods-MercadoPago.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoPago.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoPago/Pods-MercadoPago.debug.xcconfig"; sourceTree = "<group>"; };
+		C1075A541CC53F9D009D8253 /* NavItemTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavItemTitle.swift; sourceTree = "<group>"; };
 		C170568E1CC163990050C7E6 /* Bancos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bancos.swift; sourceTree = "<group>"; };
 		C17056901CC164F10050C7E6 /* Banco.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banco.swift; sourceTree = "<group>"; };
 		C17056921CC16FF80050C7E6 /* Cuotas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cuotas.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			children = (
 				C1DC215F1CBFE2F600F16FC0 /* LoadingAnimations.swift */,
 				C1DC216A1CC00E3500F16FC0 /* AlertViews.swift */,
+				C1075A541CC53F9D009D8253 /* NavItemTitle.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				C1DC21751CC0262200F16FC0 /* PaymentMethod.swift in Sources */,
 				C1DC214C1CBFDE9800F16FC0 /* ViewController.swift in Sources */,
 				C17056951CC170510050C7E6 /* CuotasCell.swift in Sources */,
+				C1075A551CC53F9D009D8253 /* NavItemTitle.swift in Sources */,
 				C1DC214A1CBFDE9800F16FC0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
