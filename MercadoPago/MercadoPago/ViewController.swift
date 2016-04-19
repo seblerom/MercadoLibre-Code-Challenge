@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController,UITextFieldDelegate{
     
-    let numberFormatter = NSNumberFormatter()
     @IBOutlet weak var textfieldMonto: UITextField!
     @IBAction func buttonSiguiente(sender: AnyObject) {
         
