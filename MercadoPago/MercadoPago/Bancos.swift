@@ -110,13 +110,6 @@ class Bancos: UITableViewController {
         }
     }
     
-    func reloadTableViewContent() {
-        dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            self.tableView.reloadData()
-            self.tableView.scrollRectToVisible(CGRectMake(0, 0, 1, 1), animated: false)
-        })
-    }
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let indexPath = tableView.indexPathForSelectedRow
         let itemBanco = self.modelArray[indexPath!.row]

@@ -13,6 +13,7 @@ let paymentMethods = "https://api.mercadopago.com/v1/payment_methods"
 let creditCardIssuers = "https://api.mercadopago.com/v1/payment_methods/card_issuers"
 let installments = "https://api.mercadopago.com/v1/payment_methods/installments"
 let public_key = "444a9ef5-8a6b-429f-abdf-587639155d88"
+let notificationKey = "operationFinished"
 
 
 

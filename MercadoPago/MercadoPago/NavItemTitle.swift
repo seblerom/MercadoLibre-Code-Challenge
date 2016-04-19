@@ -13,7 +13,7 @@ class NavItemTitle {
     
     class func SetTitleView() -> UIImageView {
         var titleView : UIImageView
-        titleView = UIImageView(frame:CGRectMake(0, 0, 120, 33))
+        titleView = UIImageView(frame:CGRectMake(0, 0, 80, 25))
         titleView.contentMode = .ScaleAspectFit
         titleView.image = UIImage(named: "mercadoPagoComplete.png")
         

@@ -8,14 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITextFieldDelegate {
-
+class ViewController: UIViewController,UITextFieldDelegate{
+    
+    let numberFormatter = NSNumberFormatter()
     @IBOutlet weak var textfieldMonto: UITextField!
-
     @IBAction func buttonSiguiente(sender: AnyObject) {
         
         let text = Double(textfieldMonto.text!)
-        if text > 0 {
+        if text >= 1 {
             self.tapGesture(self)
             self.performSegueWithIdentifier("metodoDePagoSegue", sender: self)
         }else{
@@ -24,12 +24,10 @@ class ViewController: UIViewController,UITextFieldDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        textfieldMonto.delegate = self
         self.navigationItem.titleView = NavItemTitle.SetTitleView()
-        
-        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.ShowMessage), name: notificationKey, object: nil)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -43,24 +41,20 @@ class ViewController: UIViewController,UITextFieldDelegate {
         let metodosDePago = segue.destinationViewController as! MetodosDePago
         metodosDePago.amount = self.textfieldMonto.text
     }
-
-//    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-//        
-//        let text = textField.text
-//        var newText = text!.stringByReplacingCharactersInRange(range.toRange(text!), withString: string)
-//        newText = newText.stringByReplacingOccurrencesOfString(".", withString: "")
-//        let numericValue:Double = (Double(newText)! * 0.01)
-//        textField.text = String(numericValue)
-//        return false
-//        
-//    }
+    
+    func ShowMessage(notification:NSNotification){
+        
+        let model = notification.object as! MessageModel
+        var mensaje = "Monto: " + model.amount + "\n"
+        mensaje += "Banco: " + model.banco + "\n"
+        mensaje += "Metodo de pago: " + model.paymentMethod + "\n"
+        mensaje += "Cuotas: " + model.cuotas
+        
+        AlertViews.SingleAlert("Usted seleccionó", message: mensaje, buttonTitle: "Genial!")
+        
+    }
 }
 
-//extension NSRange {
-//    func toRange(string: String) -> Range<String.Index> {
-//        let startIndex = string.startIndex.advancedBy(location)
-//        let endIndex = string.startIndex.advancedBy(length)
-//        return startIndex..<endIndex
-//    }
-//}
+
+
 

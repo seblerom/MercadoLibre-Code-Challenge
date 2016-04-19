@@ -13,7 +13,7 @@ import AlamofireImage
 
 class Connection: NSObject {
     
-   class func networkingCallsMaster(base_url:String,parameters:[String:String],completion:((JSON))-> Void){
+    class func networkingCallsMaster(base_url:String,parameters:[String:String],completion:((JSON))-> Void){
         
         Alamofire.request(.GET,base_url,parameters: parameters).validate().responseJSON { response in
             switch response.result {

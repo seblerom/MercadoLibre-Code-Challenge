@@ -10,7 +10,7 @@ import UIKit
 import MBProgressHUD
 
 class LoadingAnimations: NSObject {
-
+    
     class func showProgressHUD(view:UIView) {
         let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
         hud.labelText = "Loading"

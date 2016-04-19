@@ -60,7 +60,7 @@ class PaymentMethod{
     }
     
     init(id:String,deferred_capture:String,additional_info_needed:([String]),payment_type_id:String,accreditation_time:Int,settings:([Any]),max_allowed_amount:Int,min_allowed_amount:Int,secure_thumbnail:String,thumbnail:String,name:String,status:String){
-    
+        
         self.id = id
         self.deferred_capture = deferred_capture
         self.additional_info_needed = additional_info_needed

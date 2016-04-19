@@ -10,7 +10,7 @@
 import Foundation
 
 class Banco{
-
+    
     var id:String?
     var name:String?
     var secure_thumbnail:String?

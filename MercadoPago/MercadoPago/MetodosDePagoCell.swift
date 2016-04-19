@@ -9,7 +9,7 @@
 import UIKit
 
 class MetodosDePagoCell: UITableViewCell {
-
+    
     
     @IBOutlet weak var imageCreditCard: UIImageView!
     @IBOutlet weak var labelName: UILabel!
@@ -21,7 +21,7 @@ class MetodosDePagoCell: UITableViewCell {
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-    
+        
     }
     
 }

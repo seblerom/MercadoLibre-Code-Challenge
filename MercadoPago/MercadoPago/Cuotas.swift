@@ -9,8 +9,9 @@
 import UIKit
 import SwiftyJSON
 
-class Cuotas: UITableViewController {
 
+class Cuotas: UITableViewController {
+    
     @IBOutlet var tableview: UITableView!
     var itemBancos:Banco? = nil
     var itemMetodoDePago:PaymentMethod? = nil
@@ -19,9 +20,14 @@ class Cuotas: UITableViewController {
     var payer_costs_array:[CuotaModel.payer_costs] = []
     let basicCellIdentifier = "metodosDePagoCell"
     
+    
+    
     override func viewDidLoad() {
         self.navigationItem.titleView = NavItemTitle.SetTitleView()
         DownloadCuotas()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: nil, name: notificationKey, object: nil)
+        
     }
     
     func DownloadCuotas(){
@@ -76,7 +82,7 @@ class Cuotas: UITableViewController {
             
             let payer = subJson["payer_costs"]
             for (_,payer_costs):(String, JSON) in payer {
-
+                
                 
                 var installments = 0
                 if payer_costs["installments"].exists() {
@@ -178,15 +184,19 @@ class Cuotas: UITableViewController {
         }
     }
     
-    func reloadTableViewContent() {
-        dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            self.tableView.reloadData()
-            self.tableView.scrollRectToVisible(CGRectMake(0, 0, 1, 1), animated: false)
-        })
+    func SentPostNotification(object:MessageModel){
+        NSNotificationCenter.defaultCenter().postNotificationName(notificationKey, object: object)
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let paymentMethod = itemMetodoDePago!.id as String!
+        let banco = itemBancos?.name as String!
+        let item = self.payer_costs_array[indexPath.row]
+        let cuotas = item.recommended_message as String!
+        let messageModel = MessageModel(amount: amount, paymentMethod: paymentMethod, banco: banco, cuotas: cuotas)
         self.navigationController?.popToRootViewControllerAnimated(true)
+        SentPostNotification(messageModel)
     }
-
+    
 }

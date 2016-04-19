@@ -10,7 +10,7 @@ import UIKit
 import SwiftyJSON
 
 class MetodosDePago: UITableViewController{
-
+    
     @IBOutlet var tableview: UITableView!
     var amount:String? = nil
     let basicCellIdentifier = "metodosDePagoCell"
@@ -32,7 +32,7 @@ class MetodosDePago: UITableViewController{
     func CreateArrayWithPaymentMethods(data:(JSON)){
         
         for (_,subJson):(String, JSON) in data {
-
+            
             var id = ""
             if subJson["id"].exists(){
                 id = subJson["id"].stringValue
@@ -207,15 +207,8 @@ class MetodosDePago: UITableViewController{
             })
         }
     }
-
     
-    func reloadTableViewContent() {
-        dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            self.tableView.reloadData()
-            self.tableView.scrollRectToVisible(CGRectMake(0, 0, 1, 1), animated: false)
-        })
-    }
-
+    
     //Mark Navigation
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -224,5 +217,13 @@ class MetodosDePago: UITableViewController{
         let bancos = segue.destinationViewController as! Bancos
         bancos.itemPaymentMethod = item
         bancos.amount = amount!
+    }
+}
+extension UITableViewController{
+    func reloadTableViewContent() {
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.tableView.reloadData()
+            self.tableView.scrollRectToVisible(CGRectMake(0, 0, 1, 1), animated: false)
+        })
     }
 }

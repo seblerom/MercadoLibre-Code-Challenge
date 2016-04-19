@@ -64,6 +64,6 @@ class CuotaModel {
         self.payment_type_id = payment_type_id
         self.issuer = issuer
         self.payer_costs = payer_costs
-    
+        
     }
 }

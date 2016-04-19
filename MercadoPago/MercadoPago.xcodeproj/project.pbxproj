@@ -12,7 +12,6 @@
 		C170568F1CC163990050C7E6 /* Bancos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C170568E1CC163990050C7E6 /* Bancos.swift */; };
 		C17056911CC164F10050C7E6 /* Banco.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056901CC164F10050C7E6 /* Banco.swift */; };
 		C17056931CC16FF80050C7E6 /* Cuotas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056921CC16FF80050C7E6 /* Cuotas.swift */; };
-		C17056951CC170510050C7E6 /* CuotasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056941CC170510050C7E6 /* CuotasCell.swift */; };
 		C1851D5D1CC4216E00FA686A /* CuotaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1851D5C1CC4216E00FA686A /* CuotaModel.swift */; };
 		C1CE552E1CC1530100C2D1A2 /* MetodosDePago.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CE552D1CC1530100C2D1A2 /* MetodosDePago.swift */; };
 		C1CE55301CC153BF00C2D1A2 /* MetodosDePagoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CE552F1CC153BF00C2D1A2 /* MetodosDePagoCell.swift */; };
@@ -28,6 +27,7 @@
 		C1DC216F1CC011A900F16FC0 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DC216E1CC011A900F16FC0 /* Connection.swift */; };
 		C1DC21721CC0149D00F16FC0 /* apiEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DC21711CC0149D00F16FC0 /* apiEndpoints.swift */; };
 		C1DC21751CC0262200F16FC0 /* PaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DC21741CC0262200F16FC0 /* PaymentMethod.swift */; };
+		C1E6088D1CC5D3D5004B2201 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E6088C1CC5D3D5004B2201 /* MessageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +37,6 @@
 		C170568E1CC163990050C7E6 /* Bancos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bancos.swift; sourceTree = "<group>"; };
 		C17056901CC164F10050C7E6 /* Banco.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banco.swift; sourceTree = "<group>"; };
 		C17056921CC16FF80050C7E6 /* Cuotas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cuotas.swift; sourceTree = "<group>"; };
-		C17056941CC170510050C7E6 /* CuotasCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuotasCell.swift; sourceTree = "<group>"; };
 		C1851D5C1CC4216E00FA686A /* CuotaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuotaModel.swift; sourceTree = "<group>"; };
 		C1CE552D1CC1530100C2D1A2 /* MetodosDePago.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetodosDePago.swift; sourceTree = "<group>"; };
 		C1CE552F1CC153BF00C2D1A2 /* MetodosDePagoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetodosDePagoCell.swift; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		C1DC216E1CC011A900F16FC0 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		C1DC21711CC0149D00F16FC0 /* apiEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = apiEndpoints.swift; sourceTree = "<group>"; };
 		C1DC21741CC0262200F16FC0 /* PaymentMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentMethod.swift; sourceTree = "<group>"; };
+		C1E6088C1CC5D3D5004B2201 /* MessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		F1AF91B459E57159F6CCF969 /* Pods_MercadoPago.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadoPago.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -92,7 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				C1CE552F1CC153BF00C2D1A2 /* MetodosDePagoCell.swift */,
-				C17056941CC170510050C7E6 /* CuotasCell.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -144,6 +143,7 @@
 				C1DC21741CC0262200F16FC0 /* PaymentMethod.swift */,
 				C17056901CC164F10050C7E6 /* Banco.swift */,
 				C1851D5C1CC4216E00FA686A /* CuotaModel.swift */,
+				C1E6088C1CC5D3D5004B2201 /* MessageModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -342,6 +342,7 @@
 				C1CE552E1CC1530100C2D1A2 /* MetodosDePago.swift in Sources */,
 				C17056911CC164F10050C7E6 /* Banco.swift in Sources */,
 				C17056931CC16FF80050C7E6 /* Cuotas.swift in Sources */,
+				C1E6088D1CC5D3D5004B2201 /* MessageModel.swift in Sources */,
 				C1CE55301CC153BF00C2D1A2 /* MetodosDePagoCell.swift in Sources */,
 				C1DC21601CBFE2F600F16FC0 /* LoadingAnimations.swift in Sources */,
 				C1DC216F1CC011A900F16FC0 /* Connection.swift in Sources */,
@@ -351,7 +352,6 @@
 				C1DC21721CC0149D00F16FC0 /* apiEndpoints.swift in Sources */,
 				C1DC21751CC0262200F16FC0 /* PaymentMethod.swift in Sources */,
 				C1DC214C1CBFDE9800F16FC0 /* ViewController.swift in Sources */,
-				C17056951CC170510050C7E6 /* CuotasCell.swift in Sources */,
 				C1075A551CC53F9D009D8253 /* NavItemTitle.swift in Sources */,
 				C1DC214A1CBFDE9800F16FC0 /* AppDelegate.swift in Sources */,
 			);
